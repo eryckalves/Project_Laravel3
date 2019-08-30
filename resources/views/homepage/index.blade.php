@@ -2,6 +2,10 @@
 
 @section('content')
 <div class="container">
-    <div>HOME PAGE</div>
+    <div class="row align-items-center">
+        <div class="col-4"><h3>HOME PAGE</h3></div>
+    </div>
+
+    <hr>
 </div>
 @endsection
