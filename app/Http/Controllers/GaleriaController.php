@@ -4,11 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\user;
+use App\post;
 
 class GaleriaController extends Controller
 {
-    public function index(User $user)
+    public function show(User $user)
     {
-        return view('homepage.galeria');
+        $posts = Post::all();
+ 
+        return view('homepage.galeria',compact('posts','user'));
     }
 }

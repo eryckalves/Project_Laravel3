@@ -36,4 +36,10 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function posts()
+    {
+        //create_at variavel do timestamps() declarado no migration do database , assim como uptade_at
+        return $this->hasMany(Post::class)->orderBy('created_at','DESC');
+    }
 }
