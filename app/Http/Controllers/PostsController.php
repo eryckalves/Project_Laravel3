@@ -31,6 +31,9 @@ class PostsController extends Controller
         $ImagePath=request('image')->store('imagens','public');
 
         $image = Image::make(public_path("storage/{$ImagePath}"))->fit(1200,1200);
+        
+        $image->save();
+
         //para obter as informacoes da imagem gravada usar $infoimage
         $infoimage = auth()->user()->posts()->create([
             'image' =>$ImagePath,
@@ -39,5 +42,11 @@ class PostsController extends Controller
         return redirect()->route('homepage.galeria');
 
 
+    }
+
+    public function delete(Post $post)
+    {
+        $post->delete();
+        return redirect()->route('homepage.galeria');
     }
 }

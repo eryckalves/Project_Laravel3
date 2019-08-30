@@ -34,9 +34,15 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto pt-1 pl-2">
+                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('homepage.sobre') }}">Sobre nós</a>
+                        </li>                     
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('homepage.galeria') }}">Galeria</a>
-                        </li>  
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('homepage.contato') }}">Contato</a>
+                        </li> 
                     </ul>
 
                     <!-- Right Side Of Navbar -->
