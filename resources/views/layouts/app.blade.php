@@ -7,10 +7,17 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <!-- <title>{{ config('app.name', 'Laravel') }}</title> -->
+    <title>Nome Empresa</title>
+    <link rel="shortcut icon" href="{{ asset('imagens/favicon.png') }}">
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <!--Tem que estar na pasta public/js/-->
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/jquery.js') }}" defer></script>
+    <script src="{{ asset('js/wow.min.js') }}" defer></script>
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -39,8 +46,9 @@
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container">
 
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    <div class="">Nome Empresa</div>
+                <a class="navbar-brand d-flex align-items-center" href="{{ url('/') }}">
+                     <img class="pr-3" style="height:35px" src="{{ asset('imagens/favicon.png')}}" alt="">
+                     <div class="">Nome Empresa</div>       
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -50,7 +58,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto pt-1 pl-2">
                          <li class="nav-item">
-                            <a class="nav-link" href="{{ route('homepage.sobre') }}"><div class="{{Request::is('p/sobre') ? 'marcador_text' : null}}">Sobre nós</div></a>
+                            <a class="nav-link" href="{{ route('sobre.index') }}"><div class="{{Request::is('p/sobre') ? 'marcador_text' : null}}">Sobre nós</div></a>
                         </li>                     
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('homepage.galeria') }}"><div class="{{Request::is('p/galeria') ? 'marcador_text' : null}}">Galeria</div></a>
@@ -107,7 +115,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>

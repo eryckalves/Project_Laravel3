@@ -8,6 +8,6 @@ class SobreController extends Controller
 {
     public function show()
     {
-        return view('homepage.sobre');
+        return view('sobre.index');
     }
 }

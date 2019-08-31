@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 //rota para a pagina galeria
 Route::get('/p/galeria','GaleriaController@show')->name('homepage.galeria');
 //rota para a pagina Sobre nos
-Route::get('/p/sobre','SobreController@show')->name('homepage.sobre');
+Route::get('/p/sobre','SobreController@show')->name('sobre.index');
 //rota para a pagina contato
 Route::get('/p/contato','ContatoController@show')->name('homepage.contato');
 //rota para a pagina de criar imagem (imagem + caption) metodo controller -> @create - /photo/create
