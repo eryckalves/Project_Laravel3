@@ -32,7 +32,7 @@
     <div class="row align-items-center">
         <div class="col-4"><h3>Galeria de Fotos</h3></div>
         @auth
-            <div class="col-8 text-right"><a href="{{ route('posts.create') }}">Adicionar Foto</a></div>
+            <div class="col-8 text-right"><a href="{{ route('posts.create') }}">Adicionar Fotos</a></div>
         @endauth
     </div>
 

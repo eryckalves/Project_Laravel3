@@ -19,13 +19,28 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
+
+<style>
+
+    .navbar-nav
+    {
+        font-size: 15px;           
+    }
+
+    .marcador_text
+    {
+        color: black;
+        font-weight:bold;
+    }
+</style>
+
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
             <div class="container">
 
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Nome Empresa
+                    <div class="">Nome Empresa</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -35,13 +50,13 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto pt-1 pl-2">
                          <li class="nav-item">
-                            <a class="nav-link" href="{{ route('homepage.sobre') }}">Sobre nós</a>
+                            <a class="nav-link" href="{{ route('homepage.sobre') }}"><div class="{{Request::is('p/sobre') ? 'marcador_text' : null}}">Sobre nós</div></a>
                         </li>                     
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('homepage.galeria') }}">Galeria</a>
+                            <a class="nav-link" href="{{ route('homepage.galeria') }}"><div class="{{Request::is('p/galeria') ? 'marcador_text' : null}}">Galeria</div></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('homepage.contato') }}">Contato</a>
+                            <a class="nav-link" href="{{ route('homepage.contato') }}"><div class="{{Request::is('p/contato') ? 'marcador_text' : null}}">Contato</div></a>
                         </li>
     
                         <li class="nav-item dropdown">
@@ -49,8 +64,8 @@
                             Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Facebook</a>
-                            <a class="dropdown-item" href="#">Instagram</a>
+                            <a class="dropdown-item" href="https://www.facebook.com/">Facebook</a>
+                            <a class="dropdown-item" href="https://www.instagram.com/?hl=pt-br">Instagram</a>
                             </div>
                         </li>
     
