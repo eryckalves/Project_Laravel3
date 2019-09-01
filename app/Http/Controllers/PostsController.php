@@ -39,7 +39,7 @@ class PostsController extends Controller
             'image' =>$ImagePath,
         ]);
 
-        return redirect()->route('homepage.galeria');
+        return redirect()->route('galeria.index');
 
 
     }
@@ -47,6 +47,6 @@ class PostsController extends Controller
     public function delete(Post $post)
     {
         $post->delete();
-        return redirect()->route('homepage.galeria');
+        return redirect()->route('galeria.index');
     }
 }

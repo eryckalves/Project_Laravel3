@@ -8,6 +8,6 @@ class ContatoController extends Controller
 {
     public function show()
     {
-        return view('homepage.contato');
+        return view('contato.index');
     }
 }

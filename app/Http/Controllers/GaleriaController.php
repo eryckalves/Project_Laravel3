@@ -12,6 +12,6 @@ class GaleriaController extends Controller
     {
         $posts = Post::all();
  
-        return view('homepage.galeria',compact('posts','user'));
+        return view('galeria.index',compact('posts','user'));
     }
 }

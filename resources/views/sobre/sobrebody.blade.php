@@ -1,6 +1,5 @@
 <div class="container">
-    <!--style especifico-->
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
   <div class="quote_box" >
 
         <div class="quote">

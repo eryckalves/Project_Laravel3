@@ -13,18 +13,15 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-    <!--Tem que estar na pasta public/js/-->
-    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.js') }}" defer></script>
-    <script src="{{ asset('js/wow.min.js') }}" defer></script>
-    
-
+ 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <!--style especifico-->
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 
 <style>
@@ -61,10 +58,10 @@
                             <a class="nav-link" href="{{ route('sobre.index') }}"><div class="{{Request::is('p/sobre') ? 'marcador_text' : null}}">Sobre nós</div></a>
                         </li>                     
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('homepage.galeria') }}"><div class="{{Request::is('p/galeria') ? 'marcador_text' : null}}">Galeria</div></a>
+                            <a class="nav-link" href="{{ route('galeria.index') }}"><div class="{{Request::is('p/galeria') ? 'marcador_text' : null}}">Galeria</div></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('homepage.contato') }}"><div class="{{Request::is('p/contato') ? 'marcador_text' : null}}">Contato</div></a>
+                            <a class="nav-link" href="{{ route('contato.index') }}"><div class="{{Request::is('p/contato') ? 'marcador_text' : null}}">Contato</div></a>
                         </li>
     
                         <li class="nav-item dropdown">
@@ -72,8 +69,8 @@
                             Links
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="https://www.facebook.com/">Facebook</a>
-                            <a class="dropdown-item" href="https://www.instagram.com/?hl=pt-br">Instagram</a>
+                            <a class="dropdown-item" href="https://www.facebook.com/" target="_blank">Facebook</a>
+                            <a class="dropdown-item" href="https://www.instagram.com/?hl=pt-br" target="_blank">Instagram</a>
                             </div>
                         </li>
     

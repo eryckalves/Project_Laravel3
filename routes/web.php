@@ -21,11 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 //rota para a pagina galeria
-Route::get('/p/galeria','GaleriaController@show')->name('homepage.galeria');
+Route::get('/p/galeria','GaleriaController@show')->name('galeria.index');
 //rota para a pagina Sobre nos
 Route::get('/p/sobre','SobreController@show')->name('sobre.index');
 //rota para a pagina contato
-Route::get('/p/contato','ContatoController@show')->name('homepage.contato');
+Route::get('/p/contato','ContatoController@show')->name('contato.index');
 //rota para a pagina de criar imagem (imagem + caption) metodo controller -> @create - /photo/create
 Route::get('/p/create','PostsController@create')->name('posts.create');
 
