@@ -17,7 +17,6 @@
 
         @include('homepage/homepagebodycard')
 
-     
         <p class="lead text-center">Sempre pensando no seu Futuro</p>
         <hr>
 
@@ -47,11 +46,5 @@
 
     </div>
 </div>    
-
-
-
-
-
-
 
 @endsection
