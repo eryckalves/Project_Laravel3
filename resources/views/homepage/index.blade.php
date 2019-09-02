@@ -4,24 +4,36 @@
 
 <div class="container">
 
-    <div class="jumbotron bg-transparent">
-        <h1 class="display-4 text-center">Bem Vindo!</h1>
-        <p class="lead text-center">Rumo ao Futuro</p>
-        <hr>
+        <div class="jumbotron bg-transparent">
+            @include('homepage/homepagebodyghost')
+            <p class="lead text-center">Rumo ao Futuro</p>
+            <hr>
+        </div>
+
+        
 
         @include('homepage/homepagebodyimg')
 
  
-        <p class="lead text-center">Principais atividades</p>
+        <p class="lead text-center pt-5">Principais atividades</p>
         <hr>
 
         @include('homepage/homepagebodycard')
 
+     
         <p class="lead text-center">Sempre pensando no seu Futuro</p>
         <hr>
+        <p class="lead text-center"> A distinção entre passado, presente e futuro é apenas uma ilusão teimosamente persistente.</p>
+       
 
         <p class="lead text-center">
-         <button class="btn btn-primary" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="teoria1 teoria2">Saiba Mais</button>
+
+        <div class="container_botao pb-4 ">
+            <div class="botao_animado_left d-flex justify-content-center align-items-center ">
+                <a href="#" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="teoria1 teoria2">Saiba Mais</a>
+            </div>
+        <div>
+
         </p>
         <div class="row">
             <div class="col">
@@ -43,8 +55,8 @@
                 </div>
             </div>
         </div>
-
-    </div>
-</div>    
+</div>
 
 @endsection
+
+

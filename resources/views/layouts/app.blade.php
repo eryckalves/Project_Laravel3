@@ -20,8 +20,13 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
     <!--style especifico-->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <!--Google Maps-->
+    <script type="text/javascript" src="https://maps.google.com/maps/api/js" ></script>
+
+
 </head>
 
 <style>
@@ -112,9 +117,13 @@
             </div>
         </nav>
 
-        <main class="">
-            @yield('content')
-        </main>
+            <main class="main-page">
+                @yield('content')       
+            </main>
+
+            @include('layouts/footer')
+        
+        
     </div>
 </body>
 </html>

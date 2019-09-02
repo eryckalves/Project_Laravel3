@@ -27,33 +27,50 @@
 
 @section('content')
 
-<div class="container">
+<div class="container pb-4 pt-4">
 
     <div class="row align-items-center">
-        <div class="col-4"><h3>Galeria de Fotos</h3></div>
-        @auth
-            <div class="col-8 text-right"><a href="{{ route('posts.create') }}">Adicionar Fotos</a></div>
-        @endauth
+
+        <div class="col-4">           
+            <h3>Galeria de Fotos</h3>   
+        </div>
+
     </div>
-
-    <hr>
     
-            <div class="row">
-            @foreach($posts as $post)
+    <hr>
 
-            <div class="col-4 pb-3 mostrar_excluir" style="position:relative; width:'mainimagewidth'">
-                    <img src="/storage/{{$post->image}}" class="w-100">
-                @auth
-                    <div class="thumbnail">
-                        <a href="{{ url('/p/delete/' . $post->id ) }}">
-                            <span><img style="height:25px;" src="/storage/imagens/deletex.png" /></span>
-                        </a>
-                    </div>
-                @endauth
-             </div>  
+    <div class="row">
 
-            @endforeach
-            <div>
+    @auth
+        <div class="col-8">
+             <div class="container_botao ">
+                 <div class="botao_animado_left d-flex flex-row-reverse">
+                    <a href="{{ route('posts.create') }}">Adicionar Fotos</a>
+                </div>
+             </div>
+        </div>
+        @endauth
+
+    <div>
+   
+    <div class="row pt-2">
+    
+        @foreach($posts as $post)
+
+        <div class="col-4 pb-3 mostrar_excluir" style="position:relative; width:'mainimagewidth'">
+                <img src="/storage/{{$post->image}}" class="w-100">
+            @auth
+                <div class="thumbnail">
+                    <a href="{{ url('/p/delete/' . $post->id ) }}">
+                        <span><img style="height:25px;" src="/storage/imagens/deletex.png" /></span>
+                    </a>
+                </div>
+            @endauth
+        </div>  
+
+    @endforeach
+    <div>
+
     
 
 
