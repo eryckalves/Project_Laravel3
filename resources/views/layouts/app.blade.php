@@ -24,8 +24,7 @@
     <!--style especifico-->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <!--Google Maps-->
-    <script type="text/javascript" src="https://maps.google.com/maps/api/js" ></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoxCBzGTzazye6AgkNxBTDhwaeYf0SRKM"></script>
 
 </head>
 
@@ -66,7 +65,7 @@
                             <a class="nav-link" href="{{ route('galeria.index') }}"><div class="{{Request::is('p/galeria') ? 'marcador_text' : null}}">Galeria</div></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('contato.index') }}"><div class="{{Request::is('p/contato') ? 'marcador_text' : null}}">Contato</div></a>
+                            <a class="nav-link" href="{{ route('contato.create') }}"><div class="{{Request::is('p/contato') ? 'marcador_text' : null}}">Contato</div></a>
                         </li>
     
                         <li class="nav-item dropdown">

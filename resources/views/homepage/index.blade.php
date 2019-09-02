@@ -21,14 +21,14 @@
         @include('homepage/homepagebodycard')
 
      
-        <p class="lead text-center">Sempre pensando no seu Futuro</p>
+        <p class="lead text-center pt-4">Sempre pensando no seu Futuro</p>
         <hr>
         <p class="lead text-center"> A distinção entre passado, presente e futuro é apenas uma ilusão teimosamente persistente.</p>
        
 
         <p class="lead text-center">
 
-        <div class="container_botao pb-4 ">
+        <div class="container_botao pt-5 pb-3 ">
             <div class="botao_animado_left d-flex justify-content-center align-items-center ">
                 <a href="#" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="teoria1 teoria2">Saiba Mais</a>
             </div>

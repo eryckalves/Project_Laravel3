@@ -1,7 +1,7 @@
 
 
     
-    <div class="image_box">
+    <div class="image_box pb-5">
         <div class="box">
             <img src="imagens/landscapesnow.jpg">
         </div>

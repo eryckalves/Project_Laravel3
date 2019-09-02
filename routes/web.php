@@ -25,7 +25,9 @@ Route::get('/p/galeria','GaleriaController@show')->name('galeria.index');
 //rota para a pagina Sobre nos
 Route::get('/p/sobre','SobreController@show')->name('sobre.index');
 //rota para a pagina contato
-Route::get('/p/contato','ContatoController@show')->name('contato.index');
+Route::get('/p/contato','ContatoController@create')->name('contato.create');
+//rota postar a mensagem e email no contato
+Route::post('/p/contato','ContatoController@store')->name('contato.post');
 //rota para a pagina de criar imagem (imagem + caption) metodo controller -> @create - /photo/create
 Route::get('/p/create','PostsController@create')->name('posts.create');
 
