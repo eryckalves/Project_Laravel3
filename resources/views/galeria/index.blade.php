@@ -68,11 +68,6 @@
             @endauth
         </div>  
 
-    @endforeach
     <div>
-
-    
-
-
 </div>
 @endsection
