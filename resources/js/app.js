@@ -21,6 +21,7 @@ window.Vue = require('vue');
 
 Vue.component('components-homepage', require('./components/ComponentsHomepage.vue').default);
 
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

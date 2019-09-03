@@ -11,18 +11,26 @@
     <title>Nome Empresa</title>
     <link rel="shortcut icon" href="{{ asset('imagens/favicon.png') }}">
 
-    <!-- Scripts -->
+    <!-- Scripts -->    
     <script src="{{ asset('js/app.js') }}" defer></script>
- 
+    <script src="{{ asset('js/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('js/lightbox.js') }}" type="text/javascript"></script>
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/lightbox.css') }}">
+    
 
     <!--style especifico-->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    
+    
+
     <!--Google Maps-->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoxCBzGTzazye6AgkNxBTDhwaeYf0SRKM"></script>
 
@@ -126,3 +134,14 @@
     </div>
 </body>
 </html>
+
+<!-- Configuração do Lightbox usado na view/galeria -->
+<script type="text/javascript">
+  jQuery(function() {
+    lightbox.option ({
+        maxWidth: 800,
+        maxHeight: 800,
+        albumLabel: "%1 de %2",
+    });
+  });
+</script>

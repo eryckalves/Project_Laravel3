@@ -68,9 +68,9 @@
 
         </div>
 
-        <div class="col-5 offset-2">
+        <div class="col-5 offset-2" style="height:440px;">
             
-            <div class="map-container"  style="height:400px;"> 
+            <div class="map-container"  > 
 
                 <!-- MAPA VEM DO resources/js/components/ComponentsHomepage.vue -->
                 <components-homepage></components-homepage>

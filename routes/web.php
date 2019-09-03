@@ -38,3 +38,8 @@ Route::post('/p/galeria','PostsController@store');
 Route::post('/p/{galeria}','PostsController@store');
 //rota para dar deletar foto
 Route::get('/p/delete/{post}', 'PostsController@delete');
+
+//rota aux galeria cards
+Route::get('/p/galeriacards', function () {
+    return view('galeria.galeria_cards');
+});

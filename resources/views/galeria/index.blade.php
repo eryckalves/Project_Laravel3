@@ -41,7 +41,7 @@
 
     <div class="row">
 
-    @auth
+        @auth
         <div class="col-8">
              <div class="container_botao ">
                  <div class="botao_animado_left d-flex flex-row-reverse">
@@ -53,21 +53,44 @@
 
     <div>
    
-    <div class="row pt-2">
-    
-        @foreach($posts as $post)
+    <!-- gallery-block cards-gallery -->
+    <div class="gallery-block cards-gallery pt-5">
 
-        <div class="col-4 pb-3 mostrar_excluir" style="position:relative; width:'mainimagewidth'">
-                <img src="/storage/{{$post->image}}" class="w-100">
-            @auth
-                <div class="thumbnail">
-                    <a href="{{ url('/p/delete/' . $post->id ) }}">
-                        <span><img style="height:25px;" src="/storage/imagens/deletex.png" /></span>
-                    </a>
-                </div>
-            @endauth
-        </div>  
+        <!-- container -->
+        <div class="container">
 
-    <div>
+
+            <div class="row">
+            
+                @foreach($posts as $post)
+
+                <div class="col-md-6 col-lg-4 mostrar_excluir">
+                    <div class="card border-0 transform-on-hover">
+                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
+                        <a href="/storage/{{$post->image}}" data-lightbox="roadtrip">
+                            <img src="/storage/{{$post->image}}" class="w-100">
+                        </a>      
+                    </div>
+
+                    @auth
+                        <div class="thumbnail">
+                            <a href="{{ url('/p/delete/' . $post->id ) }}">
+                                <span><img style="height:25px;" src="/storage/imagens/deletex.png" /></span>
+                            </a>
+                        </div>
+                    @endauth
+                </div>  
+                @endforeach
+
+            <div>
+            <!-- FIM row -->
+
+        </div>
+        <!-- FIM CONTAINER -->
+
+    </div>
+    <!-- FIM gallery-block cards-gallery -->
 </div>
+
 @endsection
+

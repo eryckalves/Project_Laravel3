@@ -31,7 +31,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 30vh;            
+        min-height: 40vh;            
     }
 
     .quote
@@ -95,7 +95,7 @@
     .quote .bg_box
     {
         position: absolute;
-        top: 15%;
+        top: 20%;
         left:0;
         z-index: 1;
         opacity: 0;
@@ -554,6 +554,54 @@
             border: 1px solid rgb(116, 116, 116);
             
         }
+
+
+ /* ******************************  */
+ /* ******* GALERIA CARDS**********  */
+
+        .cards-gallery.cards-gallery h6
+        {
+            font-size: 17px;
+        }
+
+        .cards-gallery.cards-gallery .card
+        {
+            transition: 0.5s ease;
+        }
+
+        .cards-gallery.cards-gallery .card img
+        {
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, .15);
+        }
+
+        .cards-gallery.cards-gallery .a
+        {
+            color: #212529;
+        }
+
+        .cards-gallery.cards-gallery .a:hover
+        {
+            text-decoration: none;
+        }
+
+        .cards-gallery.cards-gallery .card
+        {
+            margin-bottom: 38px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+        }
+
+        /* faz a o efeito do bloco da imagem ir um pouco para frente ao passar o mouse*/
+        @media(min-width:600px)
+        {
+            .gallery-block .transform-on-hover:hover{
+                transform: translateY(-10px) scale(1.02);
+                box-shadow: 0px 10px 10px rgba(0, 0, 0, .15) !important;
+            }
+        }
+
+
+
+
 
 
 
